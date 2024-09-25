@@ -1,0 +1,69 @@
+.root {
+  width: 100%;
+  position: relative; /* Use 'relative' instead of 'flex' */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end; /* Aligns items to the right */
+  line-height: normal;
+  letter-spacing: normal;
+  margin-top: 100px;
+ 
+  
+}
+
+  
+  .component1 {
+ 
+    height: 958px;
+    flex: 1;
+    position: relative;
+    overflow: hidden; /* Ensure the images within do not overflow */
+    
+  }
+  
+  .image1Parent {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px; /* Adjust the gap between images as needed */
+    transition: transform 2s ease; /* Add transition for smooth transform */
+    
+  }
+  
+  .image1Icon,
+  .image2Icon,
+  .image3Icon,
+  .image4Icon,
+  .image5Icon {
+
+    position: relative;
+    max-height: 150%;
+    object-fit: cover;
+    width: 20%; /* Set the width of each image to 20% to fit 5 images in 100% width */
+    flex-shrink: 0;
+    transition: opacity 0.5s ease; /* Add transition for smooth opacity change */
+    
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 1500px) {
+    .image1Parent {
+      gap: 10px;
+    }
+  
+    .root {
+      width: 100%; /* Make root take full width on smaller screens */
+    }
+  
+    .component1 {
+      display: none; /* Hide the slideshow on smaller screens */
+    }
+  }
+  

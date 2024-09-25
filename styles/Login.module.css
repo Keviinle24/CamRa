@@ -1,0 +1,885 @@
+.camra,
+.createLongLastingConnection {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.camra {
+  position: absolute;
+  top: 225px;
+ left: 1.6%;
+  font-size: var(--font-size-9xl);
+  font-family: var(--font-kaushan-script);
+  background: linear-gradient(270deg, #0bfff0, #ff00f5);
+  display: inline-block;
+  width: 90px;
+  height: 271px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.createLongLastingConnection {
+ 
+  background: linear-gradient(91.38deg, #00fff0, #ff00f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+}
+.createLongLastingConnectionContainer {
+  position: absolute;
+  top: 15px;
+left: -2%;
+  font-size: var(--font-size-45xl);
+  display: inline-block;
+  width: 688px;
+  height: 87px;
+}
+.connectWithCollege {
+  position: absolute;
+  top: 232px;
+  left: -2%;
+  font-family: var(--font-istok-web);
+  color: var(--color-lightgray-100);
+  white-space: pre-wrap;
+  display: inline-block;
+  width: 497px;
+  height: 271px;
+}
+.frameChild {
+  position: absolute;
+  top: 0;
+ 
+  border-radius: var(--br-mini);
+  width: 206px;
+  height: 242px;
+  object-fit: cover;
+}
+.whiteLogo5Icon {
+  top: 7px;
+  left: -48%;
+  width: 534px;
+  height: 522px;
+}
+.frameItem,
+.whiteLogo5Icon,
+.whiteLogo6Icon {
+  position: absolute;
+  object-fit: cover;
+  
+  
+}
+.frameItem {
+  top: 283px;
+  left: 268px;
+  border-radius: var(--br-31xl);
+  width: 258px;
+  height: 246px;
+}
+.whiteLogo6Icon {
+  top: 286px;
+  left: -26.5%;
+  width: 276px;
+  height: 243px;
+}
+.frameInner,
+.whiteLogo4Icon {
+  position: absolute;
+  height: 269px;
+  object-fit: cover;
+  
+}
+.frameInner {
+  top: 165px;
+  left: 0;
+  border-radius: var(--br-31xl);
+  width: 227px;
+}
+.whiteLogo4Icon {
+  top: 140px;
+  left: -48%;
+  width: 239px;
+}
+.rectangleIcon {
+  position: absolute;
+  top: 455px;
+  left: 591px;
+  border-radius: var(--br-11xl);
+  width: 220px;
+  height: 63px;
+}
+.getStarted,
+.getStarted1 {
+  position: absolute;
+  top: 463px;
+  left: -2%;
+  display: inline-block;
+  width: 210px;
+  height: 64px;
+  background: linear-gradient(90deg, #00fff0, #ff00f5 );
+  box-shadow: 0 0 20px rgba(255, 0, 245, 0.7), 0 0 40px rgba(255, 0, 245, 0.5), 0 0 60px rgba(255, 0, 245, 0.3); 
+  border-radius: 50px; /* This makes the corners rounded */
+  transition: box-shadow 0.3s ease-in-out;
+}
+.getStarted1 {
+  top: 478px;
+}
+.camraParent,
+.desktop1Inner {
+  position: absolute;
+  top: 200px;
+
+  width: 1279px;
+  height: 531px;
+}
+.desktop1Inner {
+  top: 2222px;
+  left: 118px;
+  height: 766px;
+  display: none;
+}
+.frameIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:  99.8%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.21); /* Transparent white background */
+    border-radius: 20px; /* Rounded corners, adjust as needed */
+    backdrop-filter: blur(10px); /* Frosted glass blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 100); /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for contrast */
+ 
+    
+  }
+
+ 
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+  /* Hamburger menu lines */
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 1100px) {
+  .headers {
+    display: none; /* Hide the headers when screen width is reduced */
+  }
+
+  .hamburger {
+    display: none; /* Show the hamburger menu */
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on where you want the dropdown */
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu b {
+    margin: 10px 0;
+  }
+}
+.image1Icon
+{
+  position: absolute;
+  top: 18.3%;
+  right:5%;
+  width: 50%;
+  height: 60%;
+  object-fit: cover;
+  background: radial-gradient(circle, #ff00f5, #00fff0);
+  background-size: 200% 200%; /* Increases the background size to enhance the animation effect */
+  animation: moveGradient 10s infinite alternate; /* Animate the background gradient */
+  filter: blur(80px); /* Apply the blur effect */
+  overflow: hidden; /* Prevents the blur from overflowing */
+} 
+
+@media screen and (max-width: 1500px) {
+  .image1Icon {
+    display: none;
+  }
+}
+ 
+
+/* Keyframes for moving the gradient */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.image1Icon1 {
+  position: absolute;
+  top: 10%;
+  right: 3%;
+  width:53%;
+  height: 53%;
+  object-fit: cover;
+ 
+}
+.whiteLogo1Icon {
+  position: absolute;
+  top: 61px;
+  right: 100px;
+  width: 798px;
+  height: 758px;
+  object-fit: cover;
+  top: 5px;
+  left: 142px;
+  width: 77px;
+  height: 74px;
+}
+.home {
+  position: absolute;
+  margin-top: 30px;
+  right: 380px;
+  height: 54px;
+}
+.home,
+.merch,
+.premium {
+ 
+  top: 0;
+  display: inline-block;
+  width: 139px;
+  font-size: 20px;
+}
+.merch {
+  position: absolute;
+ 
+  height: 54px;
+  margin-top: 30px;
+  right: 170px;
+  font-size: 20px;
+}
+.premium {
+ 
+ margin-top: 30px;
+ right: 247px;
+}
+.contact,
+.headers,
+.premium {
+  position: absolute;
+  height: 54px;
+  font-size: 20px;
+  right: 10px;
+ 
+}
+.contact {
+  top: 0;
+  right: 10px;
+  display: inline-block;
+  width: 139px;
+  margin-top: 30px;
+   
+}
+.headers {
+  top: 30px;
+ right: 0;
+  width: 584px;
+  font-size: var(--font-size-base);
+}
+ 
+
+.getStarted2,
+.getStarted3 {
+  position: absolute;
+  top: 630px;
+  left: 140px;
+  display: inline-block;
+  width: 217px;
+  height: 64px;
+  background: linear-gradient(90deg, #00fff0, #ff00f5 );
+  box-shadow: 0 0 20px rgba(255, 0, 245, 0.7), 0 0 40px rgba(255, 0, 245, 0.5), 0 0 60px rgba(255, 0, 245, 0.3); 
+  border-radius: 50px; /* This makes the corners rounded */
+  transition: box-shadow 0.3s ease-in-out;
+ 
+}
+
+
+ 
+
+.theFuture,
+.ofCollegeNetworking {
+    position: absolute;
+    top: 622px;
+    left: 147px;
+    display: inline-block;
+    width: 217px;
+    height: 31px;
+   
+  }
+.getStarted3,
+.ofCollegeNetworking,
+.theFuture {
+  top: 620px;
+}
+.ofCollegeNetworking,
+.theFuture {
+  top: 250px;
+  left: 140px;
+  font-size: 350%;
+  font-family: var(--font-inter);
+  width: 830px;
+  height: 103px;
+}
+.ofCollegeNetworking {
+  top: 350px;
+  font-size: var(--font-size-14xl);
+  background: linear-gradient(91.38deg, #00fff0, #ff00f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 450px;
+ 
+}
+.camra1,
+.camra2,
+.connectWithCollege1 {
+  position: absolute;
+  display: inline-block;
+  height: 71px;
+}
+.connectWithCollege1 {
+  top: 415px;
+  left: 140px;
+  font-family: var(--font-istok-web);
+  color: var(--color-lightgray-100);
+  white-space: pre-wrap;
+  width: 497px;
+}
+
+ 
+
+.camra1,
+.camra2 {
+  top: 443px;
+  left: 255px;
+  font-size: var(--font-size-9xl);
+  font-family: var(--font-kaushan-script);
+  background: linear-gradient(270deg, #0bfff0, #ff00f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  width: 90px;
+}
+.camra2 {
+  top: 18px;
+  left: 24px;
+  font-size: var(--font-size-17xl);
+  width: 110px;
+}
+.camra3,
+.frameParent {
+  position: absolute;
+  top: 27px;
+ 
+  width: 1395px;
+  height: 880px;
+  display: none;
+}
+.camra3 {
+  top: 194px;
+
+  font-size: var(--font-size-9xl);
+  font-family: var(--font-kaushan-script);
+  background: linear-gradient(270deg, #0bfff0, #ff00f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  width: 90px;
+  height: 271px;
+}
+.exploringDifferentPerspectivContainer {
+  position: absolute;
+  top: 11px;
+  left: 9%;
+  font-size: var(--font-size-45xl);
+  display: inline-block;
+  width: 688px;
+  height: 141px;
+}
+.connectWithCollege2 {
+  position: absolute;
+  top: 166px;
+  left:9%;
+  font-family: var(--font-istok-web);
+  color: var(--color-lightgray-100);
+  white-space: pre-wrap;
+  display: inline-block;
+  width: 497px;
+  height: 271px;
+}
+.getStarted6,
+.getStarted7 {
+  position: absolute;
+  top: 380px;
+  left: 9%;
+  display: inline-block;
+  width: 198px;
+  height: 64px;
+  background: linear-gradient(90deg, #00fff0, #ff00f5);
+  box-shadow: 0 0 20px rgba(255, 0, 245, 0.7), 0 0 40px rgba(255, 0, 245, 0.5), 0 0 60px rgba(255, 0, 245, 0.3); 
+  border-radius: 50px; /* This makes the corners rounded */
+}
+.getStarted7 {
+  top: 412px;
+}
+.whiteLogo4Icon1 {
+  position: absolute;
+  top: 0;
+  left: 745px;
+  width: 414px;
+  height: 407px;
+  object-fit: cover;
+}
+.camraGroup {
+  position: absolute;
+  top: 3203px;
+  left: 118px;
+  width: 1159px;
+  height: 465px;
+  display: none;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 87px;
+  left: 72px;
+ 
+ 
+  
+  box-sizing: border-box;
+ 
+}
+
+.gradientBorderWrapper {
+ 
+  padding: 9px; /* Space for the gradient border */
+ 
+  border-radius: var(--br-31xl); /* Apply rounded corners */
+  box-sizing: border-box;
+}
+ 
+  
+  
+.followUsOn,
+.getTheLatest,
+.officialcamrame {
+  position: absolute;
+  display: inline-block;
+  width: 741px;
+  height: 91px;
+}
+.followUsOn {
+  top: 149px;
+  left: 240px;
+  font-size: var(--font-size-29xl);
+}
+.getTheLatest,
+.officialcamrame {
+  top: 314px;
+  left: 480px;
+}
+.getTheLatest {
+  top: 223px;
+  left: 259px;
+  color: var(--color-darkgray-200);
+}
+.instagramIcon {
+  position: absolute;
+  top: 304px;
+  left: 425px;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+}
+.rectangleParent {
+  position: absolute;
+  top: 3973px;
+  left: 121px;
+  width: 1221px;
+  height: 538px;
+  display: none;
+  font-size: var(--font-size-13xl);
+}
+.instagramIcon1 {
+  position: absolute;
+  top: 180px;
+  left: 1214px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+.home1 {
+  position: absolute;
+  top: 96px;
+  left: 177px;
+  display: inline-block;
+  width: 64px;
+  height: 27px;
+}
+.privacy,
+.terms {
+  top: 180px;
+  font-weight: 500;
+  color: var(--color-darkgray-100);
+}
+.terms {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 64px;
+  height: 27px;
+}
+.privacy {
+  left: 85px;
+  width: 72px;
+}
+.aboutUs,
+.conditions,
+.contact1,
+.help,
+.privacy,
+.services {
+  position: absolute;
+  display: inline-block;
+  height: 27px;
+}
+.conditions {
+  top: 180px;
+  left: 178px;
+  font-weight: 500;
+  color: var(--color-darkgray-100);
+  width: 104px;
+}
+.aboutUs,
+.contact1,
+.help,
+.services {
+  top: 95px;
+  left: 375px;
+  width: 64px;
+}
+.aboutUs,
+.contact1,
+.services {
+  top: 96px;
+  left: 555px;
+  width: 100px;
+}
+.contact1,
+.services {
+  top: 94px;
+  left: 774px;
+  width: 88px;
+}
+.contact1 {
+  top: 96px;
+  left: 970px;
+  width: 99px;
+}
+.lineDiv {
+  position: absolute;
+  top: 170.5px;
+  left: -0.5px;
+  border-top: 1px solid var(--color-white);
+  box-sizing: border-box;
+  width: 1245px;
+  height: 1px;
+}
+.linkedinIcon {
+  position: absolute;
+  top: 180px;
+  left: 1155px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+.instagramParent {
+  position: absolute;
+  top: 4415px;
+  left: 98px;
+  width: 1244px;
+  height: 272px;
+  display: none;
+  font-size: var(--font-size-xl);
+}
+.whiteLogo3Icon {
+  position: absolute;
+  top: 400px;
+  left: 26.5%;
+  width: 300px;
+  height: 276px;
+  object-fit: cover;
+}
+
+.whiteLogo3Icon11 {
+  position: absolute;
+  top: 170px;
+  left: 50%; /* Position the element relative to the center of the container */
+  transform: translateX(-50%); /* Offset the element by half of its width */
+  width: 1300px;
+ 
+}
+
+.chat,
+.connect,
+.meet {
+  position: absolute;
+  top: 520px;
+  left: 58%;
+  display: inline-block;
+  width: 296px;
+  height: 91px;
+}
+.chat,
+.meet {
+  top: 710px;
+  left: 32%;
+  width: 249px;
+}
+.chat {
+  top: 1040px;
+  left: 48.5%;
+  width: 246px;
+}
+.frameChild11,
+.whiteLogo2Icon {
+  position: absolute;
+  top: 100px;
+  object-fit: cover;
+}
+ 
+.whiteLogo2Icon {
+    left: 53%;
+  width: 373px;
+  height: 380px;
+}
+.frameDiv,
+.vectorParent,
+.whiteLogo3Icon1 {
+  position: absolute;
+  top: 622px;
+  width: 373px;
+  height: 380px;
+}
+
+.whiteLogoIcon1 {
+    position: absolute;
+    top: 0px;
+    left: 800px;
+    width: 373px;
+    height: 380px;
+  }
+.whiteLogo3Icon1 {
+    left: 41%;
+  object-fit: cover;
+}
+.frameDiv,
+.vectorParent {
+  left: 256px;
+}
+.vectorParent {
+  top: 1066px;
+  left: 0;
+  width: 1440px;
+  height: 1084px;
+  display: none;
+  font-size: var(--font-size-29xl);
+}
+.login,
+.register {
+  top: 0;
+  display: inline-block;
+  width: 139px;
+ 
+}
+.register {
+  position: absolute;
+  left: 137px;
+  height: 54px;
+}
+.login {
+  left: 302px;
+}
+.contact2,
+.headers1,
+.login {
+  position: absolute;
+  height: 54px;
+}
+.contact2 {
+  top: 0;
+  left: 436px;
+  display: inline-block;
+  width: 139px;
+}
+.headers1 {
+  top: 30px;
+  left: 843px;
+  width: 575px;
+  font-size: var(--font-size-base);
+}
+.component6variant3Item {
+    position: absolute;
+    top: 597px;
+    left: 103px;
+    border-radius: var(--br-11xl);
+    width: 220px;
+    height: 63px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Adds the frosted glass blur effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance the glass effect */
+  }
+  
+.component6variant3 {
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  width: calc(100% - 44px);
+  height: 1000px;
+  overflow: auto;
+  overflow: hidden;
+}
+.desktop1Child {
+  position: absolute;
+  top: 940px;
+  left: -325px;
+  filter: blur(40px);
+  background: linear-gradient(0deg, #100425 93.89%, rgba(16, 4, 37, 0.21));
+  width: 500%;
+  height: 400px;
+
+}
+.frame6variant3Child,
+.frame6variant3Item {
+  position: absolute;
+  top: 564px;
+  left: 552px;
+  border-radius: var(--br-31xl);
+  width: 365px;
+  height: 400px;
+  object-fit: cover;
+}
+.frame6variant3Item {
+  top: 351px;
+  left: 322px;
+  width: 280px;
+  height: 310px;
+}
+.frame6variant3 {
+  position: absolute;
+  height: 23.76%;
+  width: 100%;
+  top: 23.02%;
+  right: 0;
+  bottom: 53.22%;
+  left: 0;
+  font-size: var(--font-size-29xl);
+}
+.frame6component7variant3 {
+  position: absolute;
+  top: 47.7%;
+  left: 51%; /* Position the element relative to the center of the container */
+ 
+  width: 1279px;
+  height: 766px;
+ 
+}
+ 
+ 
+.component8variant3 {
+  position: absolute;
+  top: 69.5%;
+ 
+  left: 50%; /* Position the element relative to the center of the container */
+  transform: translateX(-50%); /* Offset the element by half of its width */
+  width: 1279px;
+  height: 766px;
+  
+}
+.connectWithUs,
+.verifycamrame {
+  position: absolute;
+  display: inline-block;
+  width: 741px;
+  height: 91px;
+}
+.connectWithUs {
+  top: 156px;
+  left: 373px;
+  font-size: var(--font-size-29xl);
+}
+.verifycamrame {
+  top: 376px;
+  left: 480px;
+}
+.mailIcon {
+  position: absolute;
+  top: 368px;
+  left: 425px;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+}
+.component9variant3,
+.frame16variant3 {
+    
+  position: absolute;
+  top: 3970px;
+  left: 50%; /* Position the element relative to the center of the container */
+  transform: translateX(-50%); /* Offset the element by half of its width */
+  width: 1221px;
+  height: 538px;
+  font-size: var(--font-size-13xl);
+}
+.frame16variant4 {
+  
+    position: absolute;
+    top: 4400px;
+    left: 50%; /* Position the element relative to the center of the container */
+    transform: translateX(-50%); /* Offset the element by half of its width */
+    width: 1221px;
+    height: 538px;
+    font-size: var(--font-size-xl);
+ 
+}
+.desktop1 {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-100);
+  height: 4762px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-josefin-sans);
+}
