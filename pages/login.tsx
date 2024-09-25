@@ -350,9 +350,7 @@ const Desktop: FunctionComponent = () => {
         <a href="https://www.linkedin.com/company/camrame/" target="_blank">     <img className={styles.linkedinIcon} alt="" src="/public/Linkedin.png" /></a>
         
       </div>
-      <div style={{ position:"absolute", left: 0, bottom: 0, padding: '10px', color: 'gray', fontSize: '10px' }}>
-  Design inspired by Vidscape Code
-</div>
+    
 <Modal isOpen={isOpen2} toggleOpen={toggleOpen2 }>
         <div className="text-gray-900 flex justify-center" style={{width: 1050, marginLeft: -55 }}>
          <div className="bg-white flex justify-center flex-1 shadow sm:rounded-lg">
