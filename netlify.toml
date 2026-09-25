@@ -1,0 +1,11 @@
+# Netlify build settings. Values here override the ones in the Netlify UI.
+# The Node.js version comes from .nvmrc (Next.js 16 needs 20.9 or newer).
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # mongodb-memory-server is only used by `npm run dev` (lib/dev-database.ts);
+  # skip its ~100 MB MongoDB download on every deploy.
+  MONGOMS_DISABLE_POSTINSTALL = "1"
