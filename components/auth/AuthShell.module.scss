@@ -1,0 +1,81 @@
+@use '../../styles/tokens' as t;
+
+.shell {
+  min-height: 100dvh;
+  display: grid;
+
+  @include t.up(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.brand {
+  display: none;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 2.5rem clamp(2rem, 4vw, 4rem);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  @include t.up(lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.brandTitle {
+  font-family: var(--font-josefin);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 4.2vw, 4.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 2rem;
+}
+
+.brandImage img {
+  width: min(100%, 26rem);
+  height: auto;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.5));
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+  font-family: var(--font-josefin);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: t.$text;
+  text-decoration: none;
+
+  i {
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+}
+
+.formSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 4rem) 1.25rem;
+  background:
+    radial-gradient(90% 60% at 100% 0%, rgba(t.$magenta, 0.08), transparent 60%),
+    radial-gradient(70% 50% at 0% 100%, rgba(t.$cyan, 0.06), transparent 60%);
+}
+
+.formInner {
+  width: 100%;
+  max-width: 26rem;
+}

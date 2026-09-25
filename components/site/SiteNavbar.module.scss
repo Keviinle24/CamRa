@@ -1,0 +1,42 @@
+@use '../../styles/tokens' as t;
+
+.navbar {
+  min-height: var(--camra-navbar-height);
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.solid {
+  background-color: rgba(t.$night, 0.78);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.toggle {
+  border: 1px solid var(--camra-glass-border);
+  border-radius: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: t.$text;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(t.$magenta, 0.3);
+  }
+}
+
+.link {
+  font-family: var(--font-josefin);
+  font-weight: 600;
+  color: rgba(t.$text, 0.8) !important;
+  padding-top: 0.6rem !important;
+
+  &:hover,
+  &:focus-visible {
+    color: #fff !important;
+  }
+}

@@ -1,0 +1,33 @@
+// Brand tokens shared by the global theme and component modules.
+@use 'sass:map';
+
+$night: #100425; // page background from the original design
+$night-raised: #170836; // cards, modals, menus
+$night-deep: #0b021b;
+$cyan: #00fff0;
+$magenta: #ff00f5;
+$violet: #c700fb; // logo colour
+$text: #f5f2fb;
+$muted: #bdb6cf;
+
+$gradient: linear-gradient(90deg, $cyan, $magenta);
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin up($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin down($name) {
+  @media (max-width: map.get($breakpoints, $name) - 0.02px) {
+    @content;
+  }
+}

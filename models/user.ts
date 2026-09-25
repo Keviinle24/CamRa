@@ -1,34 +1,27 @@
-import mongoose from "mongoose";
+import { Schema, model, models, type InferSchemaType, type Model } from 'mongoose';
 
-const emailTokenSchema = new mongoose.Schema(
-    {
-        token: {type: String, required: true, unique: true},
-        created_at: {type: Date, default: Date.now, required: true},
-        expired_at: {type: Date, default: Date.now, required: true},
-    }
+const emailTokenSchema = new Schema(
+  {
+    // Same index as the previous schema (emailToken.token_1, unique) so existing
+    // databases don't need a migration. The token is rotated, never removed.
+    token: { type: String, required: true, unique: true },
+    createdAt: { type: Date, required: true, default: Date.now },
+    expiresAt: { type: Date, required: true },
+  },
+  { _id: false },
 );
 
-export const EmailToken = mongoose.models.user || mongoose.model('emailToken', emailTokenSchema);
-
-const userSchema = new mongoose.Schema(
-    {
-      email: {
-        type: String,
-        required: true,
-        minlength: 3,
-        maxlength: 200,
-        unique: true,
-      },
-      password: { type: String, required: true, minlength: 3, maxlength: 1024 },
-      verified: {type:Boolean, required: true, default: false},
-      university:{type: String, required: true},
-      emailToken: {type: emailTokenSchema, required: true},
-    },
-    {
-      timestamps: true,
-    }
+const userSchema = new Schema(
+  {
+    email: { type: String, required: true, unique: true, trim: true, lowercase: true, maxlength: 254 },
+    password: { type: String, required: true, select: false },
+    verified: { type: Boolean, required: true, default: false },
+    university: { type: String, required: true },
+    emailToken: { type: emailTokenSchema, required: true },
+  },
+  { timestamps: true },
 );
 
-const User = mongoose.models.user || mongoose.model('user', userSchema);
+export type UserDocument = InferSchemaType<typeof userSchema>;
 
-export default User;
+export const User: Model<UserDocument> = models.User ?? model('User', userSchema, 'users');

@@ -1,0 +1,238 @@
+@use '../../styles/tokens' as t;
+
+// Hero ----------------------------------------------------------------------
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding-top: calc(var(--camra-navbar-height) + 1.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.heroPanel {
+  padding: clamp(1.75rem, 5vw, 4rem);
+}
+
+.heroTitle {
+  font-size: clamp(2.6rem, 6.2vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.02;
+  text-transform: uppercase;
+  margin: 0;
+
+  span {
+    font-size: 0.62em;
+    margin-top: 0.35em;
+  }
+}
+
+.heroLead {
+  max-width: 34rem;
+  margin-inline: auto;
+
+  @include t.up(lg) {
+    margin-inline: 0;
+  }
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.5rem;
+  color: t.$muted;
+  font-size: 0.95rem;
+
+  i {
+    color: t.$cyan;
+    margin-inline-end: 0.35rem;
+  }
+
+  @include t.up(lg) {
+    justify-content: flex-start;
+  }
+}
+
+// Showcase carousel ---------------------------------------------------------
+.showcase {
+  position: relative;
+}
+
+.showcaseGlow {
+  position: absolute;
+  inset: 8% 6%;
+  background: radial-gradient(circle, t.$magenta, t.$cyan);
+  background-size: 200% 200%;
+  filter: blur(70px);
+  opacity: 0.45;
+  border-radius: 50%;
+  animation: glow-shift 10s ease-in-out infinite alternate;
+}
+
+@keyframes glow-shift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  :global(.carousel-indicators) {
+    order: 1;
+    position: static;
+    margin: 0.75rem 0 0;
+    gap: 0.4rem;
+
+    [data-bs-target],
+    button {
+      width: 0.6rem;
+      height: 0.6rem;
+      margin: 0;
+      border: 0;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.35);
+      opacity: 1;
+      transition:
+        width 0.3s ease,
+        background-color 0.3s ease;
+    }
+
+    :global(.active) {
+      width: 1.75rem;
+      border-radius: 1rem;
+      background-image: t.$gradient;
+    }
+  }
+
+  :global(.carousel-control-prev),
+  :global(.carousel-control-next) {
+    width: 3.25rem;
+    height: 3.25rem;
+    top: calc(50% - 2.75rem);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  &:hover,
+  &:focus-within {
+    :global(.carousel-control-prev),
+    :global(.carousel-control-next) {
+      opacity: 1;
+    }
+  }
+
+  // Touch devices can't hover: keep arrows visible but subtle.
+  @media (hover: none) {
+    :global(.carousel-control-prev),
+    :global(.carousel-control-next) {
+      opacity: 0.8;
+    }
+  }
+}
+
+.carouselArrow {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: rgba(t.$night, 0.6);
+  border: 1px solid var(--camra-glass-border);
+  backdrop-filter: blur(8px);
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.slideFrame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.slideImage {
+  object-fit: contain;
+  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.45));
+}
+
+.slideCaption {
+  text-align: center;
+  margin: 0.5rem 0 0;
+  font-family: var(--font-josefin);
+  font-weight: 600;
+  color: t.$text;
+}
+
+// How it works --------------------------------------------------------------
+.step {
+  padding: 2rem;
+  position: relative;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(t.$magenta, 0.4);
+  }
+}
+
+.stepIcon {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: linear-gradient(135deg, #7b5cff, t.$magenta);
+  box-shadow: 0 10px 30px -8px rgba(t.$magenta, 0.6);
+}
+
+.stepNumber {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  margin: 0;
+  font-family: var(--font-josefin);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.07);
+}
+
+// Feature rows --------------------------------------------------------------
+.featureImage {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.5));
+  }
+}
+
+// Community collage ---------------------------------------------------------
+.collage {
+  width: 100%;
+  height: auto;
+}
+
+// Contact -------------------------------------------------------------------
+.contact {
+  max-width: 48rem;
+  margin-inline: auto;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 3rem);
+  border-radius: 2rem;
+  text-align: center;
+  background: radial-gradient(120% 140% at 50% 0%, rgba(t.$magenta, 0.12), transparent 60%), t.$night-raised;
+}

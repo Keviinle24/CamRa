@@ -1,0 +1,413 @@
+@use '../styles/tokens' as t;
+
+// ---------------------------------------------------------------------------
+// Bootstrap theme
+// ---------------------------------------------------------------------------
+$primary: t.$violet;
+$secondary: #8a7fa3;
+$info: t.$cyan;
+$success: #34e3a4;
+$warning: #ffc24b;
+$danger: #ff4d7e;
+$light: t.$text;
+$dark: t.$night;
+
+$enable-shadows: false;
+$enable-negative-margins: true;
+
+$font-family-sans-serif: var(--font-istok), system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$headings-font-family: var(--font-josefin), system-ui, sans-serif;
+$headings-font-weight: 700;
+$headings-line-height: 1.15;
+$lead-font-size: 1.15rem;
+
+$border-radius: 0.75rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-xl: 1.5rem;
+$border-radius-xxl: 2rem;
+
+$btn-font-family: var(--font-josefin), system-ui, sans-serif;
+$btn-font-weight: 700;
+$btn-padding-y: 0.7rem;
+$btn-padding-x: 1.4rem;
+$btn-padding-y-lg: 0.95rem;
+$btn-padding-x-lg: 2rem;
+$btn-font-size-lg: 1.075rem;
+$btn-border-radius: 50rem;
+$btn-border-radius-sm: 50rem;
+$btn-border-radius-lg: 50rem;
+
+$input-padding-y: 0.8rem;
+$input-padding-x: 1rem;
+$input-bg: rgba(255, 255, 255, 0.04);
+$input-focus-bg: rgba(255, 255, 255, 0.06);
+$input-focus-border-color: #e25cff;
+$focus-ring-color: rgba(255, 0, 245, 0.28);
+$form-label-font-weight: 600;
+
+$modal-content-bg: t.$night-raised;
+$modal-content-border-color: rgba(255, 255, 255, 0.1);
+$modal-backdrop-bg: #05010d;
+$modal-backdrop-opacity: 0.75;
+$dropdown-bg: t.$night-raised;
+$dropdown-border-color: rgba(255, 255, 255, 0.1);
+$dropdown-link-hover-bg: rgba(255, 255, 255, 0.06);
+
+// Dark colour mode (the site always renders with data-bs-theme="dark").
+$body-bg-dark: t.$night;
+$body-color-dark: t.$text;
+$body-secondary-color-dark: t.$muted;
+$body-secondary-bg-dark: t.$night-raised;
+$body-tertiary-bg-dark: #1d0c42;
+$border-color-dark: rgba(255, 255, 255, 0.12);
+$border-color-translucent-dark: rgba(255, 255, 255, 0.12);
+$link-color-dark: #7afff8;
+$link-hover-color-dark: t.$cyan;
+$form-valid-color-dark: #6ff0c1;
+$form-valid-border-color-dark: #34e3a4;
+$form-invalid-color-dark: #ff8fb0;
+$form-invalid-border-color-dark: #ff4d7e;
+
+@import 'bootstrap/scss/bootstrap';
+
+// ---------------------------------------------------------------------------
+// Base
+// ---------------------------------------------------------------------------
+:root {
+  --camra-gradient: #{t.$gradient};
+  --camra-gradient-vertical: linear-gradient(180deg, #{t.$magenta}, #{t.$cyan});
+  --camra-glass: rgba(255, 255, 255, 0.05);
+  --camra-glass-strong: rgba(255, 255, 255, 0.09);
+  --camra-glass-border: rgba(255, 255, 255, 0.12);
+  --camra-glow: 0 0 22px rgba(255, 0, 245, 0.5), 0 0 48px rgba(0, 255, 240, 0.2);
+  --camra-navbar-height: 4.5rem;
+}
+
+html {
+  scroll-padding-top: var(--camra-navbar-height);
+}
+
+body {
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(t.$magenta, 0.35);
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+// Josefin Sans sits high in its line box; nudge it down so button labels look centred.
+.btn {
+  padding-top: calc(var(--bs-btn-padding-y) + 0.12em);
+  padding-bottom: calc(var(--bs-btn-padding-y) - 0.12em);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+// ---------------------------------------------------------------------------
+// Brand utilities
+// ---------------------------------------------------------------------------
+.text-gradient {
+  background: var(--camra-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.wordmark {
+  font-family: var(--font-kaushan), cursive;
+  font-weight: 400;
+  letter-spacing: 0;
+  background: linear-gradient(270deg, #0bfff0, t.$magenta);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-inline-end: 0.08em; // keep the script's last glyph from clipping
+}
+
+.eyebrow {
+  font-family: var(--font-josefin);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: t.$cyan;
+}
+
+.btn-gradient {
+  --bs-btn-color: #{t.$night};
+  --bs-btn-bg: transparent;
+  --bs-btn-border-width: 0;
+  --bs-btn-hover-color: #{t.$night};
+  --bs-btn-active-color: #{t.$night};
+  --bs-btn-disabled-color: #{t.$night};
+  --bs-btn-focus-shadow-rgb: 255, 0, 245;
+  background-image: var(--camra-gradient);
+  background-size: 140% 100%;
+  background-position: 0% 50%;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    background-position 0.4s ease;
+
+  &:hover,
+  &:focus-visible {
+    background-position: 100% 50%;
+    box-shadow: var(--camra-glow);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-glass {
+  --bs-btn-color: #{t.$text};
+  --bs-btn-bg: var(--camra-glass);
+  --bs-btn-border-color: var(--camra-glass-border);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--camra-glass-strong);
+  --bs-btn-hover-border-color: rgba(255, 255, 255, 0.28);
+  --bs-btn-active-bg: rgba(255, 255, 255, 0.12);
+  --bs-btn-active-border-color: rgba(255, 255, 255, 0.3);
+  --bs-btn-active-color: #fff;
+  --bs-btn-disabled-color: #{t.$muted};
+  --bs-btn-disabled-bg: var(--camra-glass);
+  --bs-btn-disabled-border-color: var(--camra-glass-border);
+  backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: var(--camra-glass);
+  border: 1px solid var(--camra-glass-border);
+  border-radius: var(--bs-border-radius-xl);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.6);
+}
+
+// A 2px gradient outline drawn with a masked pseudo-element.
+.gradient-border {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    background: var(--camra-gradient-vertical);
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+.section {
+  padding-block: clamp(4rem, 9vw, 7.5rem);
+}
+
+.link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--bs-info);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.link-underline-hover {
+  text-decoration: none;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+// Animated blurred colour field used behind hero content.
+.glow-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  mask-image: linear-gradient(to bottom, #000 60%, transparent);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: min(60vw, 640px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.35;
+    animation: glow-drift 16s ease-in-out infinite alternate;
+  }
+
+  &::before {
+    background: t.$magenta;
+    top: -20%;
+    right: -10%;
+  }
+
+  &::after {
+    background: t.$cyan;
+    bottom: -30%;
+    left: -15%;
+    opacity: 0.22;
+    animation-delay: -8s;
+  }
+}
+
+@keyframes glow-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-8%, 6%, 0) scale(1.12);
+  }
+}
+
+// Thin, on-brand scrollbars for scrollable panels.
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Long-form legal copy (terms and privacy policy).
+.legal-content {
+  color: t.$muted;
+  line-height: 1.7;
+
+  h2 {
+    font-size: 1.5rem;
+    color: t.$text;
+    margin: 2.25rem 0 0.75rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    color: t.$text;
+    margin: 1.75rem 0 0.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    color: t.$text;
+    margin: 1.25rem 0 0.5rem;
+  }
+
+  ul {
+    padding-inline-start: 1.25rem;
+  }
+
+  li > p {
+    margin-bottom: 0.5rem;
+  }
+
+  strong {
+    color: t.$text;
+  }
+
+  > :first-child,
+  > section:first-child h3 {
+    margin-top: 0;
+  }
+}
+
+// Alerts: the default dark-mode alerts are too quiet on this background.
+[data-bs-theme='dark'] {
+  .alert-danger {
+    --bs-alert-color: #ffc9d6;
+    --bs-alert-bg: rgba(255, 77, 126, 0.16);
+    --bs-alert-border-color: rgba(255, 77, 126, 0.65);
+  }
+
+  .alert-warning {
+    --bs-alert-color: #ffe0a3;
+    --bs-alert-bg: rgba(255, 194, 75, 0.13);
+    --bs-alert-border-color: rgba(255, 194, 75, 0.55);
+  }
+
+  .alert-success {
+    --bs-alert-color: #b9f7df;
+    --bs-alert-bg: rgba(52, 227, 164, 0.13);
+    --bs-alert-border-color: rgba(52, 227, 164, 0.55);
+  }
+}
+
+.form-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-weight: 600;
+  animation: alert-shake 0.45s ease;
+
+  > i {
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+}
+
+@keyframes alert-shake {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(-6px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: none;
+  }
+}
